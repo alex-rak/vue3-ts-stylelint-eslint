@@ -2,23 +2,31 @@ module.exports = {
   extends: "stylelint-config-recommended-vue/scss",
   plugins: ["stylelint-order"],
   rules: {
+    // максимальная вложенность стилей
     "max-nesting-depth": 4,
+    // отступы
     indentation: 2,
+    // используемые ковычки в css
     "string-quotes": "double",
-    "no-descending-specificity": null,
+    // запретить селекторам с более низкой специфичностью следовать за селекторами с более высокой специфичностью.
+    "no-descending-specificity": true,
+    // не должны быть пустые блоки
     "no-empty-source": null,
+    // запретить неизвестные свойства
     "property-no-unknown": [
       true,
-      {
-        ignoreProperties: ["user-drag", "font-smooth"],
-      },
+      // {
+      //   ignoreProperties: ["user-drag", "font-smooth"],
+      // },
     ],
+    // запретить неизвестные псевдоелементы
     "selector-pseudo-element-no-unknown": [
       true,
-      {
-        ignorePseudoElements: ["v-deep"],
-      },
+      // {
+      //   ignorePseudoElements: ["v-deep"],
+      // },
     ],
+    // порядок между переменными и свойствами
     "order/order": [
       [
         "dollar-variables",
@@ -37,6 +45,7 @@ module.exports = {
       ],
       { severity: "warning" },
     ],
+    // порядок свойств
     "order/properties-order": [
       [
         "content",

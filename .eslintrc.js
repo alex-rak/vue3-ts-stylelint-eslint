@@ -112,6 +112,15 @@ module.exports = {
     "vue/component-tags-order": ["error", {
       order: ["script", "template", "style"],
     }],
+    // js - максимальная длина
+    "max-len": ["error", 120, 2, {
+      ignoreUrls: true,
+      ignoreComments: false,
+      ignorePattern: true,
+      ignoreRegExpLiterals: true,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+    }],
     // js - желаемый шаблон конкатенации `${var}str`
     "prefer-template": 2,
     // js - бесполезная конкатенация
