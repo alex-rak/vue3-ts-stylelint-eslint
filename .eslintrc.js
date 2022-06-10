@@ -113,10 +113,10 @@ module.exports = {
       order: ["script", "template", "style"],
     }],
     // js - максимальная длина
-    "max-len": ["error", 120, 2, {
+    "max-len": [2, 120, 2, {
       ignoreUrls: true,
       ignoreComments: false,
-      ignorePattern: true,
+      ignorePattern: "true",
       ignoreRegExpLiterals: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
